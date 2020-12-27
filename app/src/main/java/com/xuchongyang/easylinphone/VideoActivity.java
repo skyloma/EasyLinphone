@@ -53,17 +53,20 @@ public class VideoActivity extends AppCompatActivity {
         EasyLinphone.onDestroy();
     }
 
+    //挂断
     @OnClick(R.id.video_hang)
     public void hang() {
         EasyLinphone.hangUp();
         finish();
     }
 
+    //切换静音
     @OnClick(R.id.video_mute)
     public void mute() {
+
         EasyLinphone.toggleMicro(!EasyLinphone.getLC().isMicMuted());
     }
-
+    //切换免提
     @OnClick(R.id.video_speaker)
     public void speaker() {
         EasyLinphone.toggleSpeaker(!EasyLinphone.getLC().isSpeakerEnabled());
